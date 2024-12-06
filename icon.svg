@@ -1,0 +1,30 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle (tomato) -->
+  <circle cx="64" cy="64" r="60" fill="#FF6347"/>
+  
+  <!-- Leaf -->
+  <path d="M64 4 Q74 14, 64 24 Q54 14, 64 4" fill="#228B22"/>
+  
+  <!-- Timer marks -->
+  <g stroke="white" stroke-width="4" stroke-linecap="round">
+    <!-- 12 o'clock mark -->
+    <line x1="64" y1="24" x2="64" y2="34"/>
+    <!-- 3 o'clock mark -->
+    <line x1="94" y1="64" x2="104" y2="64"/>
+    <!-- 6 o'clock mark -->
+    <line x1="64" y1="94" x2="64" y2="104"/>
+    <!-- 9 o'clock mark -->
+    <line x1="24" y1="64" x2="34" y2="64"/>
+  </g>
+  
+  <!-- Clock hands -->
+  <g stroke="white" stroke-width="4" stroke-linecap="round">
+    <!-- Hour hand -->
+    <line x1="64" y1="64" x2="64" y2="40" transform="rotate(45 64 64)"/>
+    <!-- Minute hand -->
+    <line x1="64" y1="64" x2="64" y2="30" transform="rotate(-60 64 64)"/>
+  </g>
+  
+  <!-- Center dot -->
+  <circle cx="64" cy="64" r="4" fill="white"/>
+</svg>

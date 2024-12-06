@@ -6,6 +6,7 @@
   "engines": {
     "vscode": "^1.95.0"
   },
+  "icon": "icon.svg",
   "publisher": "arturgomes",
   "repository": {
     "type": "git",
