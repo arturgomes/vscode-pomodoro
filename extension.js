@@ -19,7 +19,42 @@ class PomodoroTimer {
         // Load configuration
         this.loadConfig();
     }
+    async setWorkDuration() {
+        const input = await vscode.window.showInputBox({
+            prompt: 'Enter work duration in minutes',
+            validateInput: (value) => {
+                const number = parseInt(value, 10);
+                if (isNaN(number) || number <= 0) {
+                    return 'Please enter a valid positive number';
+                }
+                return null;
+            }
+        });
 
+        if (input) {
+            this.workDuration = parseInt(input, 10);
+            vscode.window.showInformationMessage(`Work duration set to ${this.workDuration} minutes`);
+        }
+    }
+
+    async setBreakDuration() {
+        const input = await vscode.window.showInputBox({
+            prompt: 'Enter break duration in minutes',
+            validateInput: (value) => {
+                const number = parseInt(value, 10);
+                if (isNaN(number) || number <= 0) {
+                    return 'Please enter a valid positive number';
+                }
+                return null;
+            }
+        });
+
+        if (input) {
+            this.breakDuration = parseInt(input, 10);
+            vscode.window.showInformationMessage(`Break duration set to ${this.breakDuration} minutes`);
+        }
+    }
+    
     loadConfig() {
         const config = vscode.workspace.getConfiguration('pomodoro');
         const preset = config.get('preset');

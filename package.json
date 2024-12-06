@@ -2,11 +2,11 @@
   "name": "vscode-pomodoro",
   "displayName": "Pomodoro Timer",
   "description": "Customizable Pomodoro timer with visual indicators",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.95.0"
   },
-  "icon": "icon.svg",
+  "icon": "icon.png",
   "publisher": "arturgomes",
   "repository": {
     "type": "git",
@@ -30,6 +30,14 @@
       {
         "command": "pomodoro.reset",
         "title": "Pomodoro: Reset Timer"
+      },
+      {
+        "command": "pomodoro.setWorkDuration",
+        "title": "Set Work Duration"
+      },
+      {
+        "command": "pomodoro.setBreakDuration",
+        "title": "Set Break Duration"
       }
     ],
     "configuration": {
