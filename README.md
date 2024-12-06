@@ -67,7 +67,7 @@ Want to contribute? Great! Here's how to set up the development environment:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/vscode-pomodoro.git
+git clone https://github.com/arturgomes/vscode-pomodoro.git
 ```
 
 2. Install dependencies:
