@@ -1,0 +1,70 @@
+{
+  "name": "vscode-pomodoro",
+  "displayName": "Pomodoro Timer",
+  "description": "Customizable Pomodoro timer with visual indicators",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "publisher": "arturgomes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/vscode-pomodoro.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pomodoro.start",
+        "title": "Pomodoro: Start Timer"
+      },
+      {
+        "command": "pomodoro.pause",
+        "title": "Pomodoro: Pause Timer"
+      },
+      {
+        "command": "pomodoro.reset",
+        "title": "Pomodoro: Reset Timer"
+      }
+    ],
+    "configuration": {
+      "title": "Pomodoro Timer",
+      "properties": {
+        "pomodoro.workDuration": {
+          "type": "number",
+          "default": 25,
+          "description": "Work duration in minutes"
+        },
+        "pomodoro.breakDuration": {
+          "type": "number",
+          "default": 5,
+          "description": "Break duration in minutes"
+        },
+        "pomodoro.preset": {
+          "type": "string",
+          "enum": [
+            "25/5",
+            "50/10",
+            "custom"
+          ],
+          "default": "25/5",
+          "description": "Preset timer configurations"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.121",
+    "@types/vscode": "^1.95.0",
+    "eslint": "^8.57.1",
+    "typescript": "^5.7.2"
+  }
+}
